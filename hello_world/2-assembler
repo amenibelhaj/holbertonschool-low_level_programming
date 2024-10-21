@@ -1,0 +1,2 @@
+#!/bin/bash
+gcc -S "$CFILE" -o "${CFILE%.c}.s" || echo "Error: CFILE variable is not set or compilation failed."
