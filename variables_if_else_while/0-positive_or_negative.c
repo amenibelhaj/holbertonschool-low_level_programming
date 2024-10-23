@@ -21,5 +21,5 @@ printf("The number is: %d\n", n); // Print the number
         printf("The number is zero.\n");
     }
 
-    return (0);
+  return (0);
 }
