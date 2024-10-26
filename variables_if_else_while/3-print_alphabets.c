@@ -1,28 +1,21 @@
-#include <stdio.h>  /* Required for putchar */
+#include <stdio.h>
 
- /**
- * main - Entry point of the program.
+/**
+ * main - Prints the alphabet in lowercase, and then in uppercase.
  *
- * Description: This function prints the alphabet in lowercase
- * and then in uppercase, followed by a new line.
- *
- * Return: Always returns 0 to indicate success.
+ * Return: Always 0.
  */
-
 int main(void)
 {
-	char lowercase[] = "abcdefghijklmnopqrstuvwxyz";
-	char uppercase[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char letter;
 
-	/* Print lowercase alphabet */
-	for (int i = 0; i < 26; i++)
-		putchar(lowercase[i]);
+	for (letter = 'a'; letter <= 'z'; letter++)
+		putchar(letter);
 
-	/* Print uppercase alphabet */
-	for (int i = 0; i < 26; i++)
-		putchar(uppercase[i]);
+	for (letter = 'A'; letter <= 'Z'; letter++)
+		putchar(letter);
 
-	putchar('\n');  /* Print new line */
+	putchar('\n');
 
 	return (0);
 }
