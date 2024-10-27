@@ -1,12 +1,13 @@
 #include <stdio.h>
-#include "main.h"
-
+#include <unistd.h>
 /**
- * main - prints _putchar, followed by a new line
+ * main - Entry point
+ *
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-printf("_putchar\n");
+char msg[] = "_putchar\n";
+write(1, msg, sizeof(msg) - 1);
 return (0);
 }
