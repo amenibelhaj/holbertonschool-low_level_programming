@@ -3,7 +3,7 @@
  * draw a diagonal line - function that draws a diagonal line on the terminal.
  * @n: the number of times to print the diagonal line.
  */
-void print_diagonal(int n)
+void print_diagonal(int n);
 {
 	int i, j;
 
