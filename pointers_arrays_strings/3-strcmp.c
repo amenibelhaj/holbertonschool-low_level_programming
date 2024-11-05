@@ -1,24 +1,31 @@
-#include "main.h"
-
 /**
- * _strcmp - compares two strings.
- * @s1: the first string.
- * @s2: the second string.
+ * _strspn - gets the length of a prefix substring
+ * @s: the initial segment
+ * @accept: the bytes to be checked against
  *
- * Return: an integer less than, equal to, or greater than zero if
- * s1 is found, respectively, to be less than, to match, or be greater
- * than s2.
+ * Return: the number of bytes in the initial segment of s which
+ * consist only of bytes from accept
  */
-int _strcmp(char *s1, char *s2)
+unsigned int _strspn(char *s, char *accept)
 {
-while (*s1 && *s2)
+unsigned int i, j, length = 0;
+int found;
+for (i = 0; s[i] != '\0'; i++)
 {
-if (*s1 != *s2)
+found = 0;
+for (j = 0; accept[j] != '\0'; j++)
 {
-return (*s1 - *s2);
+if (s[i] == accept[j])
+{
+length++;
+found = 1;
+break;
 }
-s1++;
-s2++;
 }
-return (*s1 - *s2);
+if (!found)
+{
+break;
+}
+}
+return (length);
 }
