@@ -1,6 +1,4 @@
 #include "3-calc.h"
-#include <stdlib.h>
-#include <stdio.h>
 
 /**
  * main - Entry point for the calculator program
@@ -25,7 +23,7 @@ num1 = atoi(argv[1]);
 num2 = atoi(argv[3]);
 
 /* Get the operation function */
- operation = get_op_func(argv[2]);
+operation = get_op_func(argv[2]);
 if (operation == NULL)
 {
 printf("Error\n");
