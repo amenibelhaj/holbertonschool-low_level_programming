@@ -5,7 +5,7 @@
  * @head: A pointer to the first node in the list.
  */
 
- void free_list(list_t *head)
+void free_list(list_t *head)
 {
 list_t *current_node;
 list_t *next_node;
