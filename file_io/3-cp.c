@@ -25,13 +25,14 @@ return (fd);
  */
 int open_file_to(const char *filename)
 {
-int fd = open(filename, O_WRONLY | O_TRUNC | O_CREAT, S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH);
+int fd = open(filename, O_WRONLY | O_TRUNC | O_CREAT,
+S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH);
 if (fd == -1)
 {
 dprintf(STDERR_FILENO, "Error: Can't write to %s\n", filename);
 exit(99);
 }
-return fd;
+return (fd);
 }
 
 /**
