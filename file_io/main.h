@@ -14,4 +14,11 @@ ssize_t read_textfile(const char *filename, size_t letters);
 int create_file(const char *filename, char *text_content);
 int append_text_to_file(const char *filename, char *text_content);
 
+
+#define BUF_SIZE 1024
+int open_file_from(const char *filename);
+int open_file_to(const char *filename);
+void copy_content(int fd_from, int fd_to);
+void close_files(int fd_from, int fd_to);
+
 #endif
